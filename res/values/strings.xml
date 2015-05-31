@@ -1,0 +1,25 @@
+<resources>
+
+    <string name="app_name">RDPClient</string>
+    
+    <string name="mode">- 请选择模式 -</string>
+    <string name="client">客户端</string>
+    <string name="server">服务器</string>
+     <string name="status">状  态  栏</string>
+    <string name="username">用户名:</string>
+    <string name="ip">服务器IP:</string>
+    <string name="login">进  入</string>
+    <string name="leave">退  出</string>
+    <string name="send">发  送</string>    
+    <string name="unconnected">未 连 接 ！</string>
+    <string name="connected">已 连 接 ！</string>
+    
+    <string name="home">主  页</string>
+    <string name="menu">菜   单</string>
+    <string name="back">返   回</string>
+    <string name="volumeUp">音 量 +</string>
+    <string name="volumeDown">音 量 -</string>
+    <string name="Switch">开   关</string>
+       
+
+</resources>
