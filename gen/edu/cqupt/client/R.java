@@ -20,10 +20,17 @@ public final class R {
         public static final int up=0x7f020006;
     }
     public static final class id {
-        public static final int doodleView=0x7f060000;
+        public static final int back=0x7f060005;
+        public static final int down=0x7f060000;
+        public static final int home=0x7f060004;
+        public static final int menu=0x7f060003;
+        public static final int remoteView=0x7f060006;
+        public static final int sw=0x7f060001;
+        public static final int up=0x7f060002;
     }
     public static final class layout {
-        public static final int client=0x7f030000;
+        public static final int menu_layout=0x7f030000;
+        public static final int remoteview=0x7f030001;
     }
     public static final class string {
         public static final int Switch=0x7f040011;

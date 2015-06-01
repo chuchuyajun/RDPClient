@@ -9,58 +9,50 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
-
-
-
 public class RemoteView extends View 
 {
 	  
-
-	   private Bitmap bitmap; // drawing area for display or saving
+	 private Bitmap bitmap; 
+	 
+	 onRemoteViewClickCallback viewClickCallback;
+	
+	   public static interface onRemoteViewClickCallback {
+	        public void onViewClickCallback(float x,float y);
+	    }   
+	   
+	   public void addCallBack(onRemoteViewClickCallback viewClickCallback){
+		   this.viewClickCallback = viewClickCallback;
+	   }
+	   
 	   
 	   public void addBitmap(Bitmap bitmap){
 		   this.bitmap = bitmap;
 		   invalidate(); 
 	   }
 
-	   // DoodleView constructor initializes the DoodleView
 	   public RemoteView(Context context, AttributeSet attrs) 
 	   {
-	      super(context, attrs); // pass context to View's constructor     
-	   } // end DoodleView constructor
+	      super(context, attrs);   
+	   } 
 
-	   // Method onSizeChanged creates BitMap and Canvas after app displays
 	   @Override
 	   public void onSizeChanged(int w, int h, int oldW, int oldH)
 	   {
 	      bitmap = Bitmap.createBitmap(getWidth(), getHeight(),Bitmap.Config.ARGB_8888);
 	      bitmap.eraseColor(Color.WHITE); // erase the BitMap with white
-	   } // end method onSizeChanged
+	   } 
 	   
-	   // clear the painting
 	
 	   @Override
 	   protected void onDraw(Canvas canvas) 
 	   {
-	      // draw the background screen
-	      canvas.drawBitmap(bitmap, 0, 0, null);
-	    
-	   } // end method onDraw
-
-	   // handle touch event
+	      canvas.drawBitmap(bitmap, 0, 0, null);	    
+	   } 
 	   @Override
 	   public boolean onTouchEvent(MotionEvent event) 
-	   {
-	      // get the event type and the ID of the pointer that caused the event
-	      int action = event.getActionMasked(); // event type 
-	      int actionIndex = event.getActionIndex(); // pointer (i.e., finger)
-  
-	
+	   {	   
+	      viewClickCallback.onViewClickCallback(event.getX() ,event.getY() );	
 	      return true; 
-	   } 
-
-	   
-
-	  
+	   } 	  
 	  
 } 

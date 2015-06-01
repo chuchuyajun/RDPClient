@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content" 
+	android:background="#ffffff"
+	android:gravity="bottom">
+	
+    
+    <TableRow >
+        
+	<LinearLayout android:id="@+id/down"
+	     android:orientation="vertical"
+		 android:layout_width="wrap_content"
+		 android:layout_height="wrap_content"
+		 android:layout_weight="1"
+		 android:gravity="left">
+		 
+		<ImageView 
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:src="@drawable/down"
+			/>
+		
+		<TextView 
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:text="首页"
+			android:gravity="center" />
+	</LinearLayout>
+
+
+	<LinearLayout android:id="@+id/sw"
+	    android:orientation="vertical"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"		
+		android:layout_weight="1"
+		 android:gravity="center">
+		
+		<ImageView 
+		    android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:src="@drawable/sw" />
+		
+		<TextView 
+		    android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center" 
+			 android:text="我的" />
+	</LinearLayout>
+
+	<LinearLayout 
+	    android:id="@+id/up"
+	    android:orientation="vertical"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:layout_weight="1"
+		 android:gravity="right">
+		
+		<ImageView 
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:src="@drawable/up"
+			 />
+		
+		<TextView 
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center" 
+			 android:text="更多"
+			android:paddingTop="5dp"/>
+
+	</LinearLayout>
+ </TableRow>
+ 
+       <TableRow >
+        
+	<LinearLayout android:id="@+id/menu"
+	     android:orientation="vertical"
+		 android:layout_width="wrap_content"
+		 android:layout_height="wrap_content"
+		 android:layout_weight="1"
+		 android:gravity="left">
+		 
+		<ImageView 
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:src="@drawable/menu"
+			/>
+		
+		<TextView 
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:text="首页"
+			android:gravity="center" />
+	</LinearLayout>
+
+
+	<LinearLayout android:id="@+id/home"
+	    android:orientation="vertical"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"		
+		android:layout_weight="1"
+		 android:gravity="center"
+		 android:onClick="homeClick">
+		
+		<ImageView 
+		    android:layout_width="wrap_content"
+			android:layout_height="wrap_content" 
+			android:src="@drawable/home" />
+		
+		<TextView 
+		    android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center" 
+			 android:text="我的" />
+	</LinearLayout>
+
+	<LinearLayout android:id="@+id/back"
+	    android:orientation="vertical"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:layout_weight="1"
+		 android:gravity="right">
+		
+		<ImageView 
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:src="@drawable/back"
+			 />
+		
+		<TextView 
+		    android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center" 
+			 android:text="更多"
+			android:paddingTop="5dp"/>
+
+	</LinearLayout>
+ </TableRow>
+
+</TableLayout>
+

@@ -4,11 +4,9 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 
-import android.hardware.display.DisplayManager;
-import android.util.DisplayMetrics;
 import android.util.Log;
 
-public class UdpClient extends Thread  {
+public class UdpBroadCast  extends Thread  {
 	
 	private static String LOG_TAG = "UDP Broadcast";
 	public static final int DEFAULT_PORT = 2011;
@@ -18,7 +16,7 @@ public class UdpClient extends Thread  {
 	private String dataString;
 	private DatagramSocket udpSocket;
 	
-	public UdpClient(String dataString) {
+	public UdpBroadCast(String dataString) {
 		this.dataString = dataString;
 	}
 
@@ -51,3 +49,4 @@ public class UdpClient extends Thread  {
 	}
 
 }
+
